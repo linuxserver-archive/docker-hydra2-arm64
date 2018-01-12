@@ -3,7 +3,7 @@
 [ircurl]: https://www.linuxserver.io/irc/
 [podcasturl]: https://www.linuxserver.io/podcast/
 [appurl]: https://github.com/theotherp/nzbhydra2
-[hub]: https://hub.docker.com/r/lsioarmf/hydra2/
+[hub]: https://hub.docker.com/r/lsioarmf/hydra2-aarch64/
 
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
 
@@ -12,7 +12,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [IRC][ircurl] on freenode at `#linuxserver.io`
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
-# lsioarmf/hydra2
+# lsioarmf/hydra2-aarch64
 [![](https://images.microbadger.com/badges/version/lsioarmhf/hydra2-aarch64.svg)](https://microbadger.com/images/lsioarmhf/hydra2-aarch64 "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/hydra2-aarch64.svg)](http://microbadger.com/images/lsioarmhf/hydra2-aarch64 "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/hydra2-aarch64.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/hydra2-aarch64.svg)][hub][![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=Docker-Builders/arm64/arm64-hydra2)](https://ci.linuxserver.io/job/Docker-Builders/job/arm64/job/arm64-hydra2/)
 
 _NZBHydra 2_ is a meta search application for NZB indexers, the "spiritual successor" to _NZBmegasearcH_, and an evolution of the original application _[NZBHydra](https://github.com/theotherp/nzbhydra)_ . It provides easy access to a number of raw and newznab based indexers. 
@@ -29,7 +29,7 @@ docker create --name=hydra2 \
 -v <nzb download>:/downloads \
 -e PGID=<gid> -e PUID=<uid> \
 -e TZ=<timezone> \
--p 5076:5076 lsioarmf/hydra2
+-p 5076:5076 lsioarmf/hydra2-aarch64
 ```
 
 ## Parameters
@@ -76,7 +76,7 @@ The web interface is at `<your ip>:5076` , to set up indexers and connections to
 
 * image version number
 
-`docker inspect -f '{{ index .Config.Labels "build_version" }}' lsioarmf/hydra2`
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' lsioarmf/hydra2-aarch64`
 
 ## Versions
 
